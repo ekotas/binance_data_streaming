@@ -1,0 +1,1 @@
+Hello everyone. I want to become a Data Engineer so I decided to make learning project. The idea of the project is to generate streaming mock website data, transform it and load into database.    
