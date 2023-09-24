@@ -15,5 +15,5 @@ I wanted to learn Kafka and Spark so I decided to make a project to help myself.
 ![Project architecture](./images/Architecture.png "Project architecture")
 
 ## Dashboard
-![Final dashboard](./images/Architecture.png "Final dashboard")
+![Final dashboard](./images/dashboard.png "Final dashboard")
 
