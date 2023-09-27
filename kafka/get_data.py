@@ -1,25 +1,17 @@
 import websocket
 import datetime
-from confluent_kafka import Producer
-import json
+from classes.kafka_producer import KafkaInstance
 
 topic = "binance_data_streaming"
 
-# Optional per-message delivery callback (triggered by poll() or flush())
-# when a message has been successfully delivered or permanently
-# failed delivery (after retries).
-def delivery_callback(err, msg):
-	if err:
-		print('ERROR: Message failed delivery: {}'.format(err))
-	else:
-		print("Produced event to topic {topic}: key = {key:12} value = {value:12}".format(
-			topic=msg.topic(), key=msg.key().decode('utf-8'), value=msg.value().decode('utf-8')))
+kafka_instance = KafkaInstance()
+producer = kafka_instance.create_producer()
 
 def on_message(ws, message):
     print()
     print(str(datetime.datetime.now()) + ": ")
     print(message)
-    producer.produce(topic, message, callback=delivery_callback)
+    kafka_instance.produce_data(topic, message)
 
 def on_error(ws, error):
     print(error) 
@@ -37,12 +29,5 @@ def streamKline(symbol, interval):
                                 on_close=on_close)
     
     ws.run_forever()
-
-# Create Producer instance
-conf = {
-	'bootstrap.servers': 'localhost:9092'
-}
-
-producer = Producer(conf)
 
 streamKline('bnbusdt', '1m')

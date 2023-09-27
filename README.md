@@ -8,6 +8,7 @@ I wanted to learn Kafka and Spark so I decided to make a project to help myself.
 - Websocket Binance API for getting data
 - Kafka for handling streaming data
 - PySpark for collecting, cleaning and writing data
+- Virtual machine by Google Cloud
 - BigQuery as a DataWarehouse
 - PowerBI as BI tool
 

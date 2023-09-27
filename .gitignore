@@ -1,2 +1,5 @@
 .gitignore
 spark/folder_for_checkpoint/
+spark/lib/
+spark/classes/__pycache__
+kafka/classes/__pycache__
