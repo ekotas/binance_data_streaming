@@ -13,7 +13,7 @@ I wanted to learn Kafka and Spark so I decided to make a project to help myself.
 - PowerBI as BI tool
 
 ## Architecture
-![Project architecture](./images/Architecture.png "Project architecture")
+![Project architecture](./images/architecture.png "Project architecture")
 
 ## Dashboard
 ![Final dashboard](./images/dashboard.png "Final dashboard")
